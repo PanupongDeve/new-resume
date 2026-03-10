@@ -6,7 +6,7 @@ import { ArrowRight, Download, Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "@/lib/constants";
 
-const devopsTools = [
+const devopsTools: any[] = [
   // {
   //   name: "Plan",
   //   icon: "https://images.unsplash.com/photo-1583337130587-24a2b9c6a7e4?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
