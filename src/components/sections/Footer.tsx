@@ -14,7 +14,7 @@ export function Footer() {
                 <Terminal className="w-4 h-4 text-primary-foreground" />
               </div>
               <span className="font-headline font-bold text-lg tracking-tight">
-                DevOps <span className="text-accent">Nexus</span>
+                Panupong <span className="text-accent">DevOps</span>
               </span>
             </Link>
             <p className="text-sm text-muted-foreground text-center md:text-left">
@@ -36,7 +36,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground uppercase tracking-widest font-bold">
-          <p>© 2024 DEVOPS NEXUS. ALL SYSTEMS OPERATIONAL.</p>
+          <p>© 2024 Panupong DevOps. ALL SYSTEMS OPERATIONAL.</p>
           <p className="flex items-center gap-1.5">
             Built with <Heart className="w-3 h-3 text-red-500 fill-current" /> using GitOps workflows
           </p>

@@ -7,9 +7,9 @@ import { Terminal, Activity, Briefcase, Mail, Cpu, LayoutDashboard } from "lucid
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { name: "Experience", href: "#experience", icon: Briefcase },
+  { name: "Experience", href: "#work-experience", icon: Briefcase },
   { name: "Portfolio", href: "#projects", icon: Cpu },
-  { name: "Live Status", href: "#live-status", icon: Activity },
+  { name: "TechSkills", href: "#tech-skills", icon: LayoutDashboard },
   { name: "Contact", href: "#contact", icon: Mail },
 ];
 
@@ -35,7 +35,7 @@ export function Navbar() {
             <Terminal className="w-5 h-5 text-primary-foreground" />
           </div>
           <span className="font-headline font-bold text-xl tracking-tight hidden sm:inline-block">
-            DevOps <span className="text-accent">Nexus</span>
+            Panupong <span className="text-accent">DevOps</span>
           </span>
         </Link>
 
@@ -52,19 +52,6 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <Link
-            href="/ai-tool"
-            className="hidden sm:flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/30 text-primary hover:bg-primary/10 transition-colors"
-          >
-            <LayoutDashboard className="w-3 h-3" />
-            Project Lab
-          </Link>
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/50 border border-border">
-            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-[10px] uppercase font-bold tracking-wider text-muted-foreground">Cluster Active</span>
-          </div>
-        </div>
       </div>
     </header>
   );

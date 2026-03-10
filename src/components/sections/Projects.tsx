@@ -3,102 +3,105 @@ import React from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Layers, Server, Workflow } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const projects = [
   {
-    id: "project-k8s",
-    title: "Global E-Commerce K8s Migration",
-    description: "Architected a zero-downtime migration of a legacy monolithic stack to a distributed Kubernetes microservices architecture.",
-    tags: ["Kubernetes", "EKS", "Istio", "Terraform"],
-    impact: "40% reduction in cloud costs & 5x faster deployment cycles",
-    techIcon: Server,
+    id: "line-bot-manager",
+    title: "Line Bot Application",
+    description: "A web application for managing LINE bots, including features like rich menu creation and management. Built with Next.js, TypeScript, and Tailwind CSS.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "LINE API"],
+    imageUrl: "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    githubUrl: "https://github.com/PanupongDev/line-bot-manager",
+    liveUrl: null,
   },
   {
-    id: "project-terraform",
-    title: "IaC Multi-Cloud Hub",
-    description: "Developed a standardized Terraform module library for AWS, Azure, and GCP, ensuring consistent security and compliance across regions.",
-    tags: ["Terraform", "Terragrunt", "Sentinel", "Azure"],
-    impact: "90% improvement in infrastructure provisioning speed",
-    techIcon: Workflow,
+    id: "portfolio-website",
+    title: "Portfolio Website",
+    description: "My personal portfolio website to showcase my projects and skills, built with modern web technologies.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Genkit"],
+    imageUrl: "https://images.unsplash.com/photo-1559028006-448665bd7c20?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    githubUrl: "https://github.com/PanupongDev/panupong-dev",
+    liveUrl: "https://panupong-dev.vercel.app/",
   },
   {
-    id: "project-argocd",
-    title: "GitOps Continuous Delivery",
-    description: "Implemented Argo CD and GitHub Actions for a 200+ microservice environment with automated canary releases.",
-    tags: ["Argo CD", "GitOps", "GitHub Actions", "Helm"],
-    impact: "Rollback time reduced from 15 minutes to 30 seconds",
-    techIcon: Layers,
-  }
+    id: "discord-bot",
+    title: "Discord Bot",
+    description: "A multi-purpose Discord bot featuring music playback, server moderation, and fun mini-games.",
+    tags: ["Discord.js", "Node.js", "TypeScript"],
+    imageUrl: "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    githubUrl: "https://github.com/PanupongDev/Panu-Bot",
+    liveUrl: null,
+  },
+  {
+    id: "food-ordering",
+    title: "Food Ordering Website",
+    description: "A full-stack web application for browsing restaurants and ordering food, built with the MERN stack.",
+    tags: ["MongoDB", "Express", "React", "Node.js"],
+    imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    githubUrl: "https://github.com/PanupongDev/food-ordering-app",
+    liveUrl: null,
+  },
 ];
 
 export function Projects() {
   return (
     <section id="projects" className="py-24">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mb-16 space-y-4">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Engineering Solutions</h2>
-          <p className="text-lg text-muted-foreground">
-            A selection of architectural transformations where automation meets business efficiency. 
-            Each project is built with reliability as the primary design principle.
+        <div className="text-center mb-16 space-y-4">
+           <Badge variant="outline" className="px-4 py-1 text-primary border-primary/30">
+            PROJECTS
+          </Badge>
+          <h2 className="text-4xl font-bold tracking-tight">My Recent Work</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Here are a few projects I've worked on recently. They showcase my skills in web development and my ability to work with various technologies.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => {
-            const img = PlaceHolderImages.find(p => p.id === project.id);
-            return (
-              <Card key={project.id} className="group flex flex-col h-full bg-card border-border hover:border-primary/50 transition-all duration-300">
-                <div className="relative aspect-video overflow-hidden">
-                  {img && (
-                    <Image 
-                      src={img.imageUrl} 
-                      alt={img.description} 
-                      fill 
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      data-ai-hint={img.imageHint}
-                    />
-                  )}
-                  <div className="absolute top-4 left-4">
-                    <div className="bg-background/80 backdrop-blur-sm p-2 rounded-lg border border-white/10">
-                      <project.techIcon className="w-5 h-5 text-accent" />
-                    </div>
-                  </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {projects.map((project) => (
+            <Card key={project.id} className="group flex flex-col h-full bg-card border-border hover:border-primary/50 transition-all duration-300 overflow-hidden">
+              <div className="relative aspect-video overflow-hidden">
+                <Image 
+                  src={project.imageUrl} 
+                  alt={project.title} 
+                  fill 
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              
+              <CardHeader>
+                <CardTitle className="group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                <CardDescription className="line-clamp-3 text-base">{project.description}</CardDescription>
+              </CardHeader>
+
+              <CardContent className="flex-1 space-y-6">
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map(tag => (
+                    <Badge key={tag} variant="secondary">
+                      {tag}
+                    </Badge>
+                  ))}
                 </div>
-                
-                <CardHeader>
-                  <CardTitle className="group-hover:text-primary transition-colors">{project.title}</CardTitle>
-                  <CardDescription className="line-clamp-3 text-base">{project.description}</CardDescription>
-                </CardHeader>
+              </CardContent>
 
-                <CardContent className="flex-1 space-y-6">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map(tag => (
-                      <Badge key={tag} variant="secondary" className="font-code text-[10px] uppercase tracking-wider font-bold">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-
-                  <div className="p-4 rounded-xl bg-primary/5 border border-primary/10">
-                    <p className="text-xs uppercase font-bold text-primary mb-1 tracking-widest">Business Impact</p>
-                    <p className="text-sm font-medium text-foreground">{project.impact}</p>
-                  </div>
-                </CardContent>
-
-                <CardFooter className="pt-0 flex gap-4">
-                  <Button variant="outline" size="sm" className="flex-1 gap-2 rounded-full font-bold">
-                    <Github className="w-4 h-4" /> Code
+              <CardFooter className="pt-0 flex gap-4 bg-card/50 pb-4">
+                <Button asChild variant="outline" size="sm" className="flex-1 gap-2 rounded-full font-bold">
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4" /> GitHub
+                  </a>
+                </Button>
+                {project.liveUrl && (
+                  <Button asChild size="sm" className="flex-1 gap-2 rounded-full font-bold">
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4" /> Live Demo
+                    </a>
                   </Button>
-                  <Button size="sm" className="flex-1 gap-2 rounded-full font-bold">
-                    <ExternalLink className="w-4 h-4" /> Architecture
-                  </Button>
-                </CardFooter>
-              </Card>
-            );
-          })}
+                )}
+              </CardFooter>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

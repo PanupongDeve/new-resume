@@ -1,10 +1,9 @@
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { Experience } from "@/components/sections/Experience";
+import { TechSkills } from "@/components/sections/TechSkills";
 import { Projects } from "@/components/sections/Projects";
-import { LiveStatus } from "@/components/sections/LiveStatus";
-import { Contact } from "@/components/sections/Contact";
+import { WorkExperience } from "@/components/sections/WorkExperience";
 import { Footer } from "@/components/sections/Footer";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -13,10 +12,9 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <Experience />
+      <WorkExperience />
+      <TechSkills />
       <Projects />
-      <LiveStatus />
-      <Contact />
       <Footer />
       <Toaster />
     </main>

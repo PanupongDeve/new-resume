@@ -2,13 +2,49 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Cloud, Shield, Zap } from "lucide-react";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { ArrowRight, Download, Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 
-export function Hero() {
-  const heroImg = PlaceHolderImages.find(img => img.id === "hero-bg");
+const devopsTools = [
+  {
+    name: "Plan",
+    icon: "https://images.unsplash.com/photo-1583337130587-24a2b9c6a7e4?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Code",
+    icon: "https://images.unsplash.com/photo-1517694712202-1428bc6902b8?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Build",
+    icon: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Test",
+    icon: "https://images.unsplash.com/photo-1590402494682-3d84b2a8a81d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Release",
+    icon: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Deploy",
+    icon: "https://images.unsplash.com/photo-1542621334-a254cf47763b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Operate",
+    icon: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Monitor",
+    icon: "https://images.unsplash.com/photo-1551288049-bebda4e28f81?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "CI/CD",
+    icon: "https://images.unsplash.com/photo-1579546929518-9e396f3a803a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
 
+export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
       {/* Background decoration */}
@@ -21,80 +57,48 @@ export function Hero() {
         <div className="space-y-8">
           <div className="space-y-4">
             <Badge variant="outline" className="px-4 py-1 text-accent border-accent/30 bg-accent/5 font-code">
-              SYSTEMS ARCHITECT & DEVOPS LEAD
+              SOFTWARE ENGINEER
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Scaling <span className="text-primary italic">Business</span> with 
-              <span className="text-accent"> Resilient</span> Infrastructure
+              Panupong Chamsomboon
             </h1>
             <p className="text-xl text-muted-foreground max-w-xl leading-relaxed">
-              Specializing in Kubernetes orchestration, Cloud Native ecosystems, and 
-              Automated GitOps workflows. I don't just run commands; I build the backbone 
-              of modern digital enterprises.
+            Software Engineer with 5 years of experience specializing in Full-stack Development and Cloud Infrastructure. I bridge the gap between UI/UX design and scalable cloud management, leveraging modern technologies to optimize operational efficiency and drive sustainable business growth.
             </p>
+            <pre className="font-code bg-muted/10 p-4 rounded-lg border border-border/10 text-sm">
+              <code>
+              {`                              while(!dead) {
+                                code();
+                              }
+              `}
+              </code>
+            </pre>
           </div>
 
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="rounded-full gap-2 px-8">
-              Explore Projects <ArrowRight className="w-4 h-4" />
+              Resume <Download className="w-4 h-4" />
             </Button>
             <Button size="lg" variant="outline" className="rounded-full gap-2 px-8">
-              Contact Me
+              <Linkedin className="w-4 h-4" />
+            </Button>
+            <Button size="lg" variant="outline" className="rounded-full gap-2 px-8">
+              <Github className="w-4 h-4" />
             </Button>
           </div>
-
-          <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
-            <div className="space-y-2">
-              <Cloud className="w-5 h-5 text-primary" />
-              <h3 className="font-bold text-lg">Multi-Cloud</h3>
-              <p className="text-sm text-muted-foreground">AWS / GCP / Azure Expertise</p>
-            </div>
-            <div className="space-y-2">
-              <Shield className="w-5 h-5 text-accent" />
-              <h3 className="font-bold text-lg">Reliability</h3>
-              <p className="text-sm text-muted-foreground">99.99% Uptime SLA focus</p>
-            </div>
-            <div className="space-y-2">
-              <Zap className="w-5 h-5 text-primary" />
-              <h3 className="font-bold text-lg">GitOps</h3>
-              <p className="text-sm text-muted-foreground">Fast & Secure Deployments</p>
-            </div>
-          </div>
         </div>
 
-        <div className="relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200" />
-          <div className="relative aspect-square rounded-2xl overflow-hidden border border-border shadow-2xl">
-            {heroImg && (
-              <Image 
-                src={heroImg.imageUrl} 
-                alt={heroImg.description}
-                fill
-                className="object-cover"
-                data-ai-hint={heroImg.imageHint}
-              />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent flex flex-col justify-end p-8">
-              <div className="bg-background/40 backdrop-blur-md p-6 rounded-xl border border-white/10 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-code text-accent">INFRA_VIEWER.SH</span>
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 rounded-full bg-red-500/50" />
-                    <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
-                    <div className="w-2 h-2 rounded-full bg-green-500/50" />
-                  </div>
-                </div>
-                <div className="font-code text-sm text-primary-foreground/90 space-y-1">
-                  <p>$ terraform plan</p>
-                  <p className="text-green-400">Plan: 42 to add, 0 to change, 0 to destroy.</p>
-                  <p>$ kubectl get pods -A</p>
-                  <p className="text-blue-300">nexus-gateway-7f45: Running [1/1]</p>
-                  <p className="text-blue-300">nexus-api-worker-91b2: Running [1/1]</p>
-                </div>
+        <div className="grid grid-cols-3 gap-2">
+          {devopsTools.map((tool) => (
+            <div key={tool.name} className="relative aspect-square rounded-lg overflow-hidden border border-border/10 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <Image src={tool.icon} alt={tool.name} fill className="object-cover" />
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <p className="text-white font-bold text-lg">{tool.name}</p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
+
       </div>
     </section>
   );
