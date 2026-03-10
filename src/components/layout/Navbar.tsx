@@ -3,13 +3,14 @@
 
 import React from "react";
 import Link from "next/link";
-import { Terminal, Activity, Briefcase, Mail, Cpu, LayoutDashboard } from "lucide-react";
+import { Terminal, Activity, Briefcase, Mail, Cpu, LayoutDashboard, Award } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { name: "Experience", href: "#work-experience", icon: Briefcase },
   { name: "Portfolio", href: "#projects", icon: Cpu },
   { name: "TechSkills", href: "#tech-skills", icon: LayoutDashboard },
+  { name: "Certificate", href: "#certifications", icon: Award },
   { name: "Contact", href: "#contact", icon: Mail },
 ];
 

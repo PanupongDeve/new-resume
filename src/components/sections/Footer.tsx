@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { Terminal, Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { GITHUB_URL, LINKEDIN_URL } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -23,23 +24,17 @@ export function Footer() {
           </div>
 
           <div className="flex gap-6">
-            <Link href="#" className="p-2 rounded-full hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground">
+            <Link href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground">
               <Github className="w-5 h-5" />
             </Link>
-            <Link href="#" className="p-2 rounded-full hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground">
+            <Link href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground">
               <Linkedin className="w-5 h-5" />
-            </Link>
-            <Link href="#" className="p-2 rounded-full hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground">
-              <Twitter className="w-5 h-5" />
             </Link>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground uppercase tracking-widest font-bold">
-          <p>© 2024 Panupong DevOps. ALL SYSTEMS OPERATIONAL.</p>
-          <p className="flex items-center gap-1.5">
-            Built with <Heart className="w-3 h-3 text-red-500 fill-current" /> using GitOps workflows
-          </p>
+          <p>© 2026 Panupong DevOps. ALL SYSTEMS OPERATIONAL.</p>
         </div>
       </div>
     </footer>

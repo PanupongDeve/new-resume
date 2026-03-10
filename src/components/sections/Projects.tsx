@@ -4,43 +4,98 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription }
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
-import Image from "next/image";
+
+import { githubRepo } from "@/lib/constants";
 
 const projects = [
   {
-    id: "line-bot-manager",
-    title: "Line Bot Application",
-    description: "A web application for managing LINE bots, including features like rich menu creation and management. Built with Next.js, TypeScript, and Tailwind CSS.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "LINE API"],
-    imageUrl: "https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    githubUrl: "https://github.com/PanupongDev/line-bot-manager",
+    id: "gitops-with-compose-deployer",
+    year: "2022",
+    title: "gitops-with-compose-deployer",
+    description: "Repository for deploy application and manage version application with git branch.",
+    tags: ["GitOps", "Docker Compose", "Shell", "CI/CD"],
+    githubUrl: githubRepo("gitops-with-compose-deployer"),
     liveUrl: null,
   },
   {
-    id: "portfolio-website",
-    title: "Portfolio Website",
-    description: "My personal portfolio website to showcase my projects and skills, built with modern web technologies.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Genkit"],
-    imageUrl: "https://images.unsplash.com/photo-1559028006-448665bd7c20?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    githubUrl: "https://github.com/PanupongDev/panupong-dev",
-    liveUrl: "https://panupong-dev.vercel.app/",
-  },
-  {
-    id: "discord-bot",
-    title: "Discord Bot",
-    description: "A multi-purpose Discord bot featuring music playback, server moderation, and fun mini-games.",
-    tags: ["Discord.js", "Node.js", "TypeScript"],
-    imageUrl: "https://images.unsplash.com/photo-1611606063065-ee7946f0787a?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    githubUrl: "https://github.com/PanupongDev/Panu-Bot",
+    id: "gitops-with-compose-builder",
+    year: "2022",
+    title: "gitops-with-compose-builder",
+    description: "Template bash script for push docker and generate docker-compose file for deploy application with gitops process.",
+    tags: ["Bash", "Docker", "GitOps", "Shell"],
+    githubUrl: githubRepo("gitops-with-compose-builder"),
     liveUrl: null,
   },
   {
-    id: "food-ordering",
-    title: "Food Ordering Website",
-    description: "A full-stack web application for browsing restaurants and ordering food, built with the MERN stack.",
-    tags: ["MongoDB", "Express", "React", "Node.js"],
-    imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    githubUrl: "https://github.com/PanupongDev/food-ordering-app",
+    id: "pw-web-solution",
+    year: "2022",
+    title: "PW Web Solution",
+    description: "Next.js building landing page.",
+    tags: ["Next.js", "React", "Landing Page"],
+    githubUrl: githubRepo("pw-web-solution"),
+    liveUrl: null,
+  },
+  {
+    id: "k8s-pod-research",
+    year: "2021",
+    title: "k8s-pod-research",
+    description: "Learning and understanding that how k8s work and how to setup in production.",
+    tags: ["Kubernetes", "DevOps", "Research"],
+    githubUrl: githubRepo("k8s-pod-research"),
+    liveUrl: null,
+  },
+  {
+    id: "application-platform",
+    year: "2021",
+    title: "application-platform",
+    description: "Project for my learning Devops, infrastructure, Micro-Service.",
+    tags: ["DevOps", "Infrastructure", "Microservices"],
+    githubUrl: githubRepo("application-platform"),
+    liveUrl: null,
+  },
+  {
+    id: "condo-thai-scrapper",
+    year: "2021",
+    title: "condo-thai-scrapper",
+    description: "Read Data for condominium and using facebook sdk to auto post.",
+    tags: ["Web Scraping", "Facebook API", "Node.js"],
+    githubUrl: githubRepo("condo-thai-scrapper"),
+    liveUrl: null,
+  },
+  {
+    id: "linux-monitor-utility",
+    year: "2021",
+    title: "linux-monitor-utility",
+    description: "Utility shell script help people monitor resource in linux server.",
+    tags: ["Shell", "Linux", "Monitoring"],
+    githubUrl: githubRepo("linux-monitor-utility"),
+    liveUrl: null,
+  },
+  {
+    id: "linux-swap-memory-service",
+    year: "2020",
+    title: "linux-swap-memory-service",
+    description: "Startup script swap linux memory.",
+    tags: ["Linux", "Shell", "System"],
+    githubUrl: githubRepo("linux-swap-memory-service"),
+    liveUrl: null,
+  },
+  {
+    id: "line-shop-store",
+    year: "2019",
+    title: "line-shop-store",
+    description: "Clone react-demo-store and add feature firebase and Line LIFF.",
+    tags: ["React", "Firebase", "LINE LIFF"],
+    githubUrl: githubRepo("line-shop-store"),
+    liveUrl: null,
+  },
+  {
+    id: "react-kdr",
+    year: "2019",
+    title: "react-kdr",
+    description: "Use React and Firebase library to build E-commerce client.",
+    tags: ["React", "Firebase", "E-commerce"],
+    githubUrl: githubRepo("react-kdr"),
     liveUrl: null,
   },
 ];
@@ -50,29 +105,17 @@ export function Projects() {
     <section id="projects" className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
-           <Badge variant="outline" className="px-4 py-1 text-primary border-primary/30">
+          <Badge variant="outline" className="px-4 py-1 text-primary border-primary/30">
             PROJECTS
           </Badge>
-          <h2 className="text-4xl font-bold tracking-tight">My Recent Work</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here are a few projects I've worked on recently. They showcase my skills in web development and my ability to work with various technologies.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <Card key={project.id} className="group flex flex-col h-full bg-card border-border hover:border-primary/50 transition-all duration-300 overflow-hidden">
-              <div className="relative aspect-video overflow-hidden">
-                <Image 
-                  src={project.imageUrl} 
-                  alt={project.title} 
-                  fill 
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              
               <CardHeader>
-                <CardTitle className="group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                <p className="text-xs text-muted-foreground">{project.year}</p>
+                <CardTitle className="text-base group-hover:text-primary transition-colors">{project.title}</CardTitle>
                 <CardDescription className="line-clamp-3 text-base">{project.description}</CardDescription>
               </CardHeader>
 
@@ -92,13 +135,6 @@ export function Projects() {
                     <Github className="w-4 h-4" /> GitHub
                   </a>
                 </Button>
-                {project.liveUrl && (
-                  <Button asChild size="sm" className="flex-1 gap-2 rounded-full font-bold">
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4" /> Live Demo
-                    </a>
-                  </Button>
-                )}
               </CardFooter>
             </Card>
           ))}

@@ -4,9 +4,20 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const skills = {
-  Languages: ["C", "C++", "Python", "HTML", "CSS", "JavaScript", "TypeScript", "SQL"],
-  "Frameworks / Libraries": ["React", "Next.js", "Tailwind CSS", "Prisma", "Express", "Genkit", "Firebase"],
-  "Tools / Others": ["Git", "Docker", "Google Cloud Platform"],
+  Frontend: ["React", "Javascript / TypeScript", "HTML / CSS"],
+  Backend: ["Nodejs", "Authentication", "Mysql", "Firebase"],
+  DevOps: ["Linux Command", "CI/CD", "Docker", "Kubernetes", "AWS", "GCP"],
+  "Technical Fundamental": [
+    "Clean Code",
+    "Design Pattern",
+    "12 Factor Application",
+    "Cloud Networking Design",
+    "Cloud Design for Cost Optimize",
+    "Software High Availability",
+    "Software Reliability",
+    "Software Security",
+    "GitOps Process",
+  ],
 };
 
 export function TechSkills() {
@@ -18,9 +29,6 @@ export function TechSkills() {
             SKILLS
           </Badge>
           <h2 className="text-4xl font-bold tracking-tight mt-4">My Technical Skills</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mt-4 max-w-2xl mx-auto">
-            Here are some of the technologies I'm proficient in, ranging from programming languages to modern web development tools and platforms.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

@@ -5,6 +5,36 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const workHistory = [
   {
+    company: "T.T.SOFTWARE SOLUTION",
+    role: "DevOps Engineer",
+    period: "Jan 2025 - Present",
+    employmentType: "Full-time · Remote",
+    tasks: [
+      "Design and implement CI/CD pipelines with Microsoft Azure DevOps for automated build and deployment",
+      "Containerize applications and manage deployments using Kubernetes and Docker",
+      "Implement software deployment strategies including blue-green and rolling updates",
+    ],
+    technologies: ["TypeScript", "CI/CD", "Microsoft Azure", "Software Deployment", "Kubernetes"],
+  },
+  {
+    company: "JIB Digital Consult",
+    role: "DevOps Engineer",
+    period: "Nov 2022 - Nov 2024",
+    employmentType: "Full-time · Thailand",
+    tasks: [
+      "Setup CI/CD with Gitlab — Caching building dependency and build container images, Use GitOps design for automate deploy from gitlab to Docker containers",
+      "Setup Grafana Loki Server help Developer monitor log in instance server with don't breaking IT Operation",
+      "Setup weekly building container images for legacy project measure source code still working",
+      "Setup Linux server and Docker for management environment — Setup Linux server, Setup Docker and Docker Compose",
+      "Nginx configuration Design — reverse proxy, security headers, SSL with certbot, mirror request, server caching",
+      "Database Management — Backup and restore MongoDB with mongodump and mongorestore, Backup and restore PostgreSQL with pg_dump and psql",
+      "Cost Optimize — Create swap memory service startup for minimize pricing instance, Create script daily snapshot droplet(instance) avoid pricing auto backup features, Optimize configuration Newrelic for reduce data sending and cover free plan",
+      "Production Deployment — Design and implement Production stack with AWS using Terraform, ECS, EFS, WAF, Load Balancing, S3, RDS Serverless PostgreSQL",
+      "Design and implement Production stack with Digital Ocean using App Platform, PostgreSQL service, Droplet, Space Storage",
+    ],
+    technologies: ["Gitlab", "Linux", "DigitalOcean", "GitOps", "CI/CD", "Docker", "AWS", "Terraform", "Nginx", "PostgreSQL", "MongoDB"],
+  },
+  {
     company: "Primo World Co., Ltd",
     role: "DevOps Engineer",
     period: "Jan 2020 - May 2022",

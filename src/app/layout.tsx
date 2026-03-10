@@ -1,8 +1,8 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'DevOps Nexus | Cloud Architect Portfolio',
+  title: 'Panupong Chamsombbon | Senior DevOps Engineer',
   description: 'Senior DevOps Engineer and Cloud Architect portfolio showcasing infrastructure as code, GitOps, and scalable cloud solutions.',
 };
 
