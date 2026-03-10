@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract network infrastructure visualization",
+      "imageUrl": "https://picsum.photos/seed/devops1/1200/800",
+      "imageHint": "network infrastructure"
+    },
+    {
+      "id": "project-k8s",
+      "description": "Kubernetes cluster architecture diagram",
+      "imageUrl": "https://picsum.photos/seed/k8s/600/400",
+      "imageHint": "kubernetes cluster"
+    },
+    {
+      "id": "project-terraform",
+      "description": "Cloud infrastructure as code",
+      "imageUrl": "https://picsum.photos/seed/terraform/600/400",
+      "imageHint": "cloud computing"
+    },
+    {
+      "id": "project-argocd",
+      "description": "GitOps delivery pipeline",
+      "imageUrl": "https://picsum.photos/seed/argocd/600/400",
+      "imageHint": "software pipeline"
+    }
+  ]
+}
